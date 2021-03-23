@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Hello</title>
+     <style>
+    .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid blue;
+            padding: 10px;
+
+    }
+  </style>
+  </head>
+ 
+
+  <body>
+    <div id="app" />
+    <script type="text/babel">
+
+      class Hello extends React.Component {
+        render() {
+          return (            
+            <form>
+                <h1>Sign In</h1>
+
+                <div className="form-group">
+                    <label>Email address</label>
+                    <input type="email" className="form-control" placeholder="Enter email" />
+                </div>
+
+                <div className="form-group">
+                    <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" />
+                </div>
+
+                <div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                    </div>
+                </div>
+
+                <button type="submit" className="btn btn-primary btn-block">Submit</button>
+          );
+        }
+      }
+
+     
+
+      ReactDOM.render(<Hello />, document.querySelector("#app"));
+
+    </script>
+  </body>
+</html>
